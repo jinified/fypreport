@@ -1,0 +1,131 @@
+\chapter{Next Semester}
+
+\section{Existing problems}
+
+\begin{enumerate}
+    \item Very costly to acquire large training data
+    \item Manual selection of algorithms and parameters based on expert knowledge required
+    \item Expensive sensors needed to achieve robust tracking. Non-visual based sensors i.e LIDAR and sonar provides competitive edge
+    \item State-of-the art tracking algorithm has high detection latency. Not suitable for real-time application 
+\end{enumerate}
+
+\section{Objectives}
+
+\begin{enumerate}
+    \item Robustness
+        \begin{itemize}
+            \item Different water bodies i.e lake, ocean
+            \item Changes in illuminations
+            \item Shadow
+        \end{itemize}
+    \item Automation
+        \begin{itemize}
+            \item Automatically chooses algorithm and parameters for preprocessing offline
+            \item Automatically tune camera parameter to achieve optimal image for further processing
+            \item Recommends object detection algorithm given image
+        \end{itemize}
+    \item Flexibility
+        \begin{itemize}
+            \item Easily adapted to different Robosub missions
+            \item Algorithm scales with more training data
+        \end{itemize}
+    \item Rapid Prototyping \\
+        Very fast iteration with limited data collection. Able to learn on the fly or suggest what data to collect
+\end{enumerate}
+
+\section{How do we measure success ?}
+
+\begin{enumerate}
+    \item Accuracy across different challenging dataset
+    \item Precision of bounding box
+    \item FPS
+    \item Number of training data vs accuracy 
+\end{enumerate}
+
+\section{Mental blocks}
+
+\begin{enumerate}
+    \item Ensemble approach vs automatically choosing the best algorithm
+    \item Focus on preprocessing vs working on color space that is not affected by illuminations and color degradation
+    \item Domain adaptation / transfer learning vs independent task learning
+    \item Using multiple cues and features vs simple features that just work
+    \item One general framework that works for different tasks while allowing unique strategy to be built for specific task
+    \item How much invariance needed to be enforced ? Affine ?
+\end{enumerate}
+
+\section{Innovations}
+
+\begin{enumerate}
+    \item Non-parametric approach
+    \item Ensemble approach i.e bagging , boosting
+    \item Detection free approach when near object
+    \item Transfer Learning
+    \item Combining local and global features
+    \item Automatic mission testing 
+    \item Using visual prior to encode belief
+    \item Tool for rapid annotation on the fly due to competition need
+    \item Synthesize data to test robustness and increase training dataset
+    
+    
+\end{enumerate}
+
+\section{Methodology}
+
+\subsection{Automatic camera tuning}
+
+\begin{enumerate}
+    \item Make use of image entropy to tune parameters
+    \item Using mean intensity of brightness
+\end{enumerate}
+
+\subsection{Choosing color space}
+
+\begin{enumerate}
+    \item Illumination-invariant color space
+    \item Work on chromacity of the objects 
+    \item Different color space for different task
+\end{enumerate}
+
+\subsection{Image enhancement}
+
+\begin{enumerate}
+    \item Contrast stretching
+    \item Gamma correction 
+    \item Image fusion 
+    \item Histogram Equalization 
+    \item Removing flicker
+\end{enumerate}
+
+\subsection{Object Proposals}
+Focus on identifying all potential objects in the scene
+
+\begin{enumerate}
+    \item EdgeBox
+    \item SelectiveSearch
+    \item Saliency
+    \item MSER
+    \item BING
+    \item Background Subtraction
+\end{enumerate}
+
+\subsection{Object Detection}
+
+\begin{enumerate}
+    \item HOG
+    \item Integral Channel Feature
+    \item Color Histogram
+    \item Correlation Filter
+    \item HuMoment
+    \item GIST
+    \item Binary Feature Detectors
+    \item Haar like feature
+\end{enumerate}
+
+\subsection{Object Tracking}
+
+\begin{enumerate}
+    \item Particle Filter
+    \item Mean Shift
+    \item Covariance tracking
+\end{enumerate}
+
