@@ -1,12 +1,15 @@
-\chapter{Next Semester}
+\chapter{This semester}
 
 \section{Existing problems}
 
 \begin{enumerate}
     \item Very costly to acquire large training data
-    \item Manual selection of algorithms and parameters based on expert knowledge required
-    \item Expensive sensors needed to achieve robust tracking. Non-visual based sensors i.e LIDAR and sonar provides competitive edge
-    \item State-of-the art tracking algorithm has high detection latency. Not suitable for real-time application 
+    \item Manual selection of algorithms and parameters based on expert
+          knowledge required
+    \item Expensive sensors needed to achieve robust tracking. Non-visual based
+          sensors i.e LIDAR and sonar provides competitive edge
+    \item State-of-the art tracking algorithm has high detection latency. Not
+         suitable for real-time application 
 \end{enumerate}
 
 \section{Objectives}
@@ -20,8 +23,10 @@
         \end{itemize}
     \item Automation
         \begin{itemize}
-            \item Automatically chooses algorithm and parameters for preprocessing offline
-            \item Automatically tune camera parameter to achieve optimal image for further processing
+            \item Automatically chooses algorithm and parameters for
+                  preprocessing offline
+            \item Automatically tune camera parameter to achieve optimal image
+                  for further processing
             \item Recommends object detection algorithm given image
         \end{itemize}
     \item Flexibility
@@ -30,10 +35,11 @@
             \item Algorithm scales with more training data
         \end{itemize}
     \item Rapid Prototyping \\
-        Very fast iteration with limited data collection. Able to learn on the fly or suggest what data to collect
+        Very fast iteration with limited data collection. Able to learn on the
+        fly or suggest what data to collect
 \end{enumerate}
 
-\section{How do we measure success ?}
+\section{How do we measure success?}
 
 \begin{enumerate}
     \item Accuracy across different challenging dataset
@@ -46,18 +52,20 @@
 
 \begin{enumerate}
     \item Ensemble approach vs automatically choosing the best algorithm
-    \item Focus on preprocessing vs working on color space that is not affected by illuminations and color degradation
+    \item Focus on preprocessing vs working on color space that is not affected
+          by illuminations and color degradation
     \item Domain adaptation / transfer learning vs independent task learning
     \item Using multiple cues and features vs simple features that just work
-    \item One general framework that works for different tasks while allowing unique strategy to be built for specific task
-    \item How much invariance needed to be enforced ? Affine ?
+    \item One general framework that works for different tasks while allowing
+          unique strategy to be built for specific task
+    \item How much invariance needed to be enforced? Affine?
 \end{enumerate}
 
 \section{Innovations}
 
 \begin{enumerate}
     \item Non-parametric approach
-    \item Ensemble approach i.e bagging , boosting
+    \item Ensemble approach i.e bagging, boosting
     \item Detection free approach when near object
     \item Transfer Learning
     \item Combining local and global features
@@ -65,8 +73,7 @@
     \item Using visual prior to encode belief
     \item Tool for rapid annotation on the fly due to competition need
     \item Synthesize data to test robustness and increase training dataset
-    
-    
+
 \end{enumerate}
 
 \section{Methodology}
@@ -129,3 +136,33 @@ Focus on identifying all potential objects in the scene
     \item Covariance tracking
 \end{enumerate}
 
+\subsection{Planning}
+
+\begin{enumerate}
+    \item Automatic camera parameters tuning
+    \item Color space transformation 
+    \item Basic preprocessing layer
+    \item Implement object proposal algorithms
+    \item Implement object detection algorithms
+    \item Implement object tracking algorithms
+    \item Implement object representation
+    \item Implement domain adaptation based on data from pool
+    \item Experiment with effect of multi-cue feature approach
+    \item Unsupervised learning of features
+    \item Ensemble approach to reduce variance
+    \item Consider detection free approach when very near object
+    \item Combining local and global features in detection
+    \item Concept of supporter and distractor to enhance detection
+    \item Online update of detected objects
+    \item \item Basic preprocessing layer
+    \item Implement object proposal algorithms
+    \item Implement object detection algorithms
+    \item Implement object tracking algorithms
+    \item Implement object representation
+    \item Implement domain adaptation based on data from pool
+    \item Experiment with effect of multi-cue feature approach
+    \item Unsupervised learning of features
+    \item Ensemble approach to reduce variance
+    \item Consider detection free approach when very near object
+    \item Systematic state testing for simulation
+\end{enumerate}
