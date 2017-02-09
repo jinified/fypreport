@@ -99,3 +99,24 @@
 *** TODO RBM
 *** TODO Autoencoder
 *** TODO CNN
+
+* Objectives
+** Robustness
+*** Different environment i.e pool, ocean, lake
+*** Different illuminations i.e cloudy, bright, shadow
+*** Different viewpoint
+** Automation
+*** Hyperparamters optimization:
+**** Preprocessing
+**** Object Detection
+**** Camera paramters
+*** Features selection
+*** Model Selection
+** Efficiency
+*** Low detection latency
+*** Decent performance with small amount of data
+*** Active learning approach to data collection
+** Ease of use
+*** Rapid ground truth generation
+*** Able to encode prior knowledge easily
+*** Ease of human intervention to speedup
